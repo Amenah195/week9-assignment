@@ -46,7 +46,7 @@ https://dummyjson.com/products
 
 ## Screenshots
 ![store]( product-store-app/screenshots/store.PNG)
-![detail](product-store-app/screenshots/detail.PNG)
+![detail](product-store-app/screenshots/Details.PNG)
 ![cart](product-store-app/screenshots/screenshots/Cart.PNG)
 
 ## Author
