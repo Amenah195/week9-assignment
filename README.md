@@ -47,8 +47,7 @@ https://dummyjson.com/products
 ## Screenshots
 ![store](./screenshots/store.PNG)
 ![detail](./screenshots/detail.PNG)
-![cart](./screenshots/Cart.PNG
-![test](https://via.placeholder.com/300)
+![cart](./screenshots/cart.PNG)
 
 ## Author
 Amenah Askari
