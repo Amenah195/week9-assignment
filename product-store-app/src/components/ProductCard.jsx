@@ -1,45 +1,56 @@
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
-import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 
 export default function ProductCard({ product }) {
     const dispatch = useDispatch();
 
     return (
-        <div
-            style={{
-                border: "1px solid #ddd",
-                padding: "15px",
-                margin: "10px"
-            }}
-        >
-            <img
-                src={product.images[0]}
-                alt={product.title}
-                width="120"
-            />
+        <div className="card product-card h-100 shadow-sm">
+            <div className="product-img-wrapper">
+                <img
+                    src={product.images?.[0]}
+                    alt={product.title}
+                    className="product-img"
+                />
+            </div>
 
-            <h3>{product.title}</h3>
+            <div className="card-body d-flex flex-column">
 
-            <p>${product.price}</p>
 
-            <Link to={`/product/${product.id}`}>
-                Details
-            </Link>
+                <h6 className="product-title">
+                    {product.title.length > 50
+                        ? product.title.slice(0, 50) + "..."
+                        : product.title}
+                </h6>
 
-            <br />
-            <br />
 
-            <button
-                className="btn btn-success"
-                onClick={() => {
-                    dispatch(addToCart(product));
-                    toast.success("Added to cart🛒");
-                }}
-            >
-                Add To Cart
-            </button>
+                <p className="product-price">
+                    ${product.price}
+                </p>
+
+
+                <div className="mt-auto d-flex justify-content-between align-items-center">
+
+
+                    <Link
+                        to={`/product/${product.id}`}
+                        className="details-link"
+                    >
+                        Details
+                    </Link>
+
+
+                    <button
+                        className="btn btn-success btn-sm"
+                        onClick={() => dispatch(addToCart(product))}
+                    >
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
         </div >
     );
 }

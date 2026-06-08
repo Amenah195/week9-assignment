@@ -8,21 +8,21 @@ export default function SettingsPanel() {
         <div className="container mt-3 d-flex gap-3">
 
             <button
-                className="btn btn-dark"
+                className={state.darkMode ? "btn btn-light" : "btn btn-dark"}
                 onClick={() =>
                     dispatch({ type: "TOGGLE_THEME" })
                 }
             >
-                Theme: {state.darkMode ? "Dark" : "Light"}
+                {state.darkMode ? "🌙Dark Mode" : "☀Light Mode"}
             </button>
 
             <button
-                className="btn btn-primary"
+                className={state.view === "grid" ? "btn btn-warning" : "btn btn-success"}
                 onClick={() =>
                     dispatch({ type: "TOGGLE_VIEW" })
                 }
             >
-                View: {state.view}
+                {state.view === "grid" ? "📦Grid View" : "📃List View"}
             </button>
 
         </div>
