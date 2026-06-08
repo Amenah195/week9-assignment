@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function ProductCard({ product }) {
     const dispatch = useDispatch();
@@ -31,9 +32,11 @@ export default function ProductCard({ product }) {
             <br />
 
             <button
-                onClick={() =>
-                    dispatch(addToCart(product))
-                }
+                className="btn btn-success"
+                onClick={() => {
+                    dispatch(addToCart(product));
+                    toast.success("Added to cart🛒");
+                }}
             >
                 Add To Cart
             </button>
