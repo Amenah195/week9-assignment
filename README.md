@@ -45,7 +45,7 @@ npm run dev
 https://dummyjson.com/products
 
 ## Screenshots
-![store](screenshots/store.PNG)
+![store]( product-store-app/screenshots/store.PNG)
 ![detail](./screenshots/detail.PNG)
 ![cart](screenshots/screenshots/Cart.PNG)
 
