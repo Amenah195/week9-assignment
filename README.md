@@ -45,9 +45,9 @@ npm run dev
 https://dummyjson.com/products
 
 ## Screenshots
-![Home](./screenshots/store.PNG)
-![Details](./screenshots/Cart.PNG)
-![Cart](./screenshots/Cart.PNG)
+![store](./screenshots/store.PNG)
+![detail](./screenshots/detail.PNG)
+![cart](./screenshots/cart.PNG)
 
 ## Author
 Amenah Askari
